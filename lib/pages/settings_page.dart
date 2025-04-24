@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'profile_page.dart';
-import 'account_page.dart';
-import 'app_settings_page.dart';
-import 'about_me_page.dart';
-import 'support_me_page.dart';
+// import 'account_page.dart';
+// import 'app_settings_page.dart';
+// import 'about_me_page.dart';
+// import 'support_me_page.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -27,14 +27,14 @@ class SettingsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _buildButton(context, 'Profile', const ProfilePage()),
-                  const SizedBox(height: 8),
-                  _buildButton(context, 'Account', const AccountPage()),
-                  const SizedBox(height: 8),
-                  _buildButton(context, 'App Settings', const AppSettingsPage()),
-                  const SizedBox(height: 8),
-                  _buildButton(context, 'About Me', const AboutMePage()),
-                  const SizedBox(height: 8),
-                  _buildButton(context, 'Support Me', const SupportMePage()),
+                  // const SizedBox(height: 8),
+                  // _buildButton(context, 'Account', const AccountPage()),
+                  // const SizedBox(height: 8),
+                  // _buildButton(context, 'App Settings', const AppSettingsPage()),
+                  // const SizedBox(height: 8),
+                  // _buildButton(context, 'About Me', const AboutMePage()),
+                  // const SizedBox(height: 8),
+                  // _buildButton(context, 'Support Me', const SupportMePage()),
                 ],
               ),
             ),
