@@ -1,4 +1,4 @@
-### musixmatch_clone
+# musixmatch_clone
 
 A GUI and functional clone of the Musixmatch app on Google Play Store. I have implemented YouTube search for music, YouTube trending songs page, local music library display and Google Firebase Firestore features.
 
@@ -15,6 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-# Bulk commit issue
+### Bulk commit issue
 
 I forgot to commit changes while heavily invested in the project, and therefore from Basic GUI to almost full completion, all changes are in one commit.
