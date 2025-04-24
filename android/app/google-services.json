@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584433660625",
+    "project_id": "musixmatch-2acdd",
+    "storage_bucket": "musixmatch-2acdd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584433660625:android:82661b8332c72ae0964bf0",
+        "android_client_info": {
+          "package_name": "com.example.musixmatch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBexyD1o8e2xTuOoVmVN451pqe3YnnJt3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,9 +17,9 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     const HomePage(),
-    const MusicPage(),
+    MusicPage(),
     const ContributePage(),
-    const IdentifyPage(),
+    IdentifyPage(),
     const SearchPage(),
   ];
 
@@ -33,32 +33,36 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        destinations: const <NavigationDestination>[
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.music_note),
+          NavigationDestination(
+            icon: Icon(Icons.music_note_outlined),
+            selectedIcon: Icon(Icons.music_note),
             label: 'Music',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
+          NavigationDestination(
+            icon: Icon(Icons.add_circle_outline),
+            selectedIcon: Icon(Icons.add_circle),
             label: 'Contribute',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.mic),
+          NavigationDestination(
+            icon: Icon(Icons.mic_none),
+            selectedIcon: Icon(Icons.mic),
             label: 'Identify',
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.search),
+            selectedIcon: Icon(Icons.search),
             label: 'Search',
           ),
         ],
+        onDestinationSelected: _onItemTapped,
       ),
     );
   }

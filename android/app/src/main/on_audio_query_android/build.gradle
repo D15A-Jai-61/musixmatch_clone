@@ -1,0 +1,7 @@
+android {
+    namespace "com.example.on_audio_query"
+    
+    defaultConfig {
+        minSdkVersion 21
+    }
+} 
