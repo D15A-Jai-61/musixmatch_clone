@@ -2,6 +2,7 @@
 
 A GUI and functional clone of the Musixmatch app on Google Play Store. I have implemented YouTube search for music, YouTube trending songs page, local music library display and Google Firebase Firestore features.
 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -14,9 +15,11 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+
 ## No API keys in the code, and proper way to store the Keys not implemented
 
 You will have to add your own API keys, and hardcode them, or implement a way to securely store those keys.
+
 
 ## Existing features
 
@@ -29,6 +32,7 @@ You will have to add your own API keys, and hardcode them, or implement a way to
 7. Picture-in-Picture mode
 8. Music recognition (Add your own key)
 
+
 ## Features to improve or add
 
 1. Implement a secure and proper way to store API keys
@@ -38,9 +42,11 @@ You will have to add your own API keys, and hardcode them, or implement a way to
 5. Add a functionality to search for lyrics and to display them
 6. Add a functionality to display lyrics on top of other apps using the PiP mode
 
+
 ## Copyrighted content
 
 The images used in the project have been directly screenshotted from the official Musixmatch app, and I don't know if they are copyrighted or not, however, I recommend that you don't use these pictures if you plan on distributing this codebase.
+
 
 ## License notice
 
