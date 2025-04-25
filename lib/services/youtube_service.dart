@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class YoutubeService {
-  static const String _apiKey = ''; // Get a Key from Google (Or YouTube if they separate-out from Google) and add it in the single quotes.
+  static const String _apiKey = ''; // Get a Key from Google (or YouTube if they separate-out from Google) and add it in the single quotes.
   static const String _baseUrl = 'https://www.googleapis.com/youtube/v3';
 
   Future<List<dynamic>> getTrendingMusic() async {

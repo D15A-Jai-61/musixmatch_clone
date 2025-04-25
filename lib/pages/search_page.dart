@@ -12,7 +12,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   final FocusNode _focusNode = FocusNode();
   bool _isKeyboardVisible = false;
-  final YouTubeService _youtubeService = YouTubeService('AIzaSyCSRme32xO618i-5iTIz0_XI4sos6gzNfI');
+  final YouTubeService _youtubeService = YouTubeService('');  // Get your Key from Google (or YouTube) and add it in the single quotes inside the round brackets.
   List<dynamic> _searchResults = [];
 
   @override
@@ -97,7 +97,7 @@ class YouTubeService {
   YouTubeService(this.apiKey);
 
   Future<List<dynamic>> searchVideos(String query) async {
-    final url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q=$query&key=$apiKey';
+    final url = '';  // Add a URL based on what API Key you use.
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
