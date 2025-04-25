@@ -55,99 +55,122 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Image Placeholder
-            Center(
-              child: Container(
-                width: 100,
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(50),
+        child: Center(
+          child: Container(
+            constraints: const BoxConstraints(maxWidth: 400),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                // Image Placeholder
+                Center(
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    child: const Icon(
+                      Icons.person,
+                      size: 50,
+                      color: Colors.grey,
+                    ),
+                  ),
                 ),
-                child: const Icon(
-                  Icons.person,
-                  size: 50,
-                  color: Colors.grey,
+                const SizedBox(height: 16),
+
+                // Name Field
+                SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    controller: nameController,
+                    decoration: const InputDecoration(
+                      labelText: 'Name',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 16),
+                const SizedBox(height: 16),
 
-            // Name Field
-            TextField(
-              controller: nameController,
-              decoration: const InputDecoration(
-                labelText: 'Name',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 16),
+                // Nickname Field
+                SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    controller: nicknameController,
+                    decoration: const InputDecoration(
+                      labelText: 'Nickname',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
 
-            // Nickname Field
-            TextField(
-              controller: nicknameController,
-              decoration: const InputDecoration(
-                labelText: 'Nickname',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 16),
+                // Date of Birth Field
+                SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    controller: dobController,
+                    decoration: const InputDecoration(
+                      labelText: 'Date of Birth',
+                      border: OutlineInputBorder(),
+                      hintText: 'YYYY-MM-DD',
+                    ),
+                    keyboardType: TextInputType.datetime,
+                  ),
+                ),
+                const SizedBox(height: 16),
 
-            // Date of Birth Field
-            TextField(
-              controller: dobController,
-              decoration: const InputDecoration(
-                labelText: 'Date of Birth',
-                border: OutlineInputBorder(),
-                hintText: 'YYYY-MM-DD',
-              ),
-              keyboardType: TextInputType.datetime,
-            ),
-            const SizedBox(height: 16),
+                // Designation Dropdown
+                SizedBox(
+                  width: double.infinity,
+                  child: DropdownButtonFormField<String>(
+                    value: designation,
+                    decoration: const InputDecoration(
+                      labelText: 'Designation',
+                      border: OutlineInputBorder(),
+                    ),
+                    items: const [
+                      DropdownMenuItem(value: 'Singer', child: Text('Singer')),
+                      DropdownMenuItem(value: 'Drummer', child: Text('Drummer')),
+                      DropdownMenuItem(value: 'Pianist', child: Text('Pianist')),
+                      DropdownMenuItem(value: 'Guitar player', child: Text('Guitar player')),
+                      DropdownMenuItem(value: 'Writer', child: Text('Writer')),
+                      DropdownMenuItem(value: 'DJ', child: Text('DJ')),
+                      DropdownMenuItem(value: 'Composer', child: Text('Composer')),
+                    ],
+                    onChanged: (value) {
+                      setState(() {
+                        designation = value;
+                      });
+                    },
+                  ),
+                ),
+                const SizedBox(height: 16),
 
-            // Designation Dropdown
-            DropdownButtonFormField<String>(
-              value: designation,
-              decoration: const InputDecoration(
-                labelText: 'Designation',
-                border: OutlineInputBorder(),
-              ),
-              items: const [
-                DropdownMenuItem(value: 'Singer', child: Text('Singer')),
-                DropdownMenuItem(value: 'Drummer', child: Text('Drummer')),
-                DropdownMenuItem(value: 'Pianist', child: Text('Pianist')),
-                DropdownMenuItem(value: 'Guitar player', child: Text('Guitar player')),
-                DropdownMenuItem(value: 'Writer', child: Text('Writer')),
-                DropdownMenuItem(value: 'DJ', child: Text('DJ')),
-                DropdownMenuItem(value: 'Composer', child: Text('Composer')),
+                // Home City Field
+                SizedBox(
+                  width: double.infinity,
+                  child: TextField(
+                    controller: cityController,
+                    decoration: const InputDecoration(
+                      labelText: 'Home City',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                // Submit Button
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: submitForm,
+                    child: const Text('Submit'),
+                  ),
+                ),
               ],
-              onChanged: (value) {
-                setState(() {
-                  designation = value;
-                });
-              },
             ),
-            const SizedBox(height: 16),
-
-            // Home City Field
-            TextField(
-              controller: cityController,
-              decoration: const InputDecoration(
-                labelText: 'Home City',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 16),
-
-            // Submit Button
-            ElevatedButton(
-              onPressed: submitForm,
-              child: const Text('Submit'),
-            ),
-          ],
+          ),
         ),
       ),
     );
