@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBexyD1o8e2xTuOoVmVN451pqe3YnnJt3o"
+          "current_key": ""  // Get a Key from Google Firebase and add it in the double quotes.
         }
       ],
       "services": {

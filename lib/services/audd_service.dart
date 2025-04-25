@@ -9,7 +9,7 @@ class AuddService {
   Future<Map<String, dynamic>> recognizeSong(String audioFilePath) async {
     final uri = Uri.parse('https://api.audd.io/');
     final request = http.MultipartRequest('POST', uri)
-      ..fields['api_token'] = apiKey
+      ..fields[''] = apiKey  // Get your Key from Audd.io or edit this file according to whichever service you are using, and add their key in the single quotes in the square brackets.
       ..files.add(await http.MultipartFile.fromPath('file', audioFilePath));
 
     final response = await request.send();
